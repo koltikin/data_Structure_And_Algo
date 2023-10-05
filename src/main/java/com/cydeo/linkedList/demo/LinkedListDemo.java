@@ -1,7 +1,6 @@
 package com.cydeo.linkedList.demo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
