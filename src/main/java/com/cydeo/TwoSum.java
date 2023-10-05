@@ -1,17 +1,16 @@
 package com.cydeo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class TwoSum {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{4, 2, 9, 5, 2, 7, 11, 15};
+        int[] nums = new int[]{4, 2, 9, 5, 2, 7, 11, 6};
         int target = 8;
 
         System.out.println(Arrays.toString(findTarget(nums, target)));
-
+        System.out.println(Arrays.toString(findTarget1(nums, target)));
+        System.out.println(Arrays.toString(findTarget2(nums, target)));
 
     }
 
@@ -31,6 +30,36 @@ public class TwoSum {
         }
         return new int[]{};
     }
+
+    private static int[] findTarget1(int[] nums, int target) {
+
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i<nums.length; i++) {
+            int pair = target-nums[i];
+            if (map.containsKey(pair)) {
+                return new int[] {map.get(pair),i};
+            } else map.put(nums[i],i);
+
+        }
+
+        return new int[]{};
+    }
+
+    private static int[] findTarget2(int[] nums, int target) {
+
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i<nums.length; i++) {
+            int pair = target-nums[i];
+            if (map.containsKey(pair)) {
+                return new int[] {map.get(pair),i};
+            } else if (!map.containsKey(nums[i])) {
+                map.put(nums[i], i);
+            }
+
+        }
+        return new int[]{};
+    }
+
 
 }
 
