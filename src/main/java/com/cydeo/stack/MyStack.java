@@ -25,7 +25,7 @@ public class MyStack <T>{
     }
 
     public T pop(){
-        SNode peekNode;
+        SNode<T> peekNode;
         if (isEmpty()) throw new NoSuchElementException();
 
         if (top==bottom){
@@ -37,12 +37,12 @@ public class MyStack <T>{
             peekNode = top;
             SNode prev = bottom;
             while (prev.next != top){
-
+                prev = prev.next;
             }
             prev.next = null;
         }
         size--;
-        return (T)peekNode.value;
+        return peekNode.value;
     }
 
 }
