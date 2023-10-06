@@ -68,6 +68,24 @@ public class MySinglyLinkedList {
             size ++;
         }
     }
+
+    int getKthFromLast(int k){
+        if (isEmpty() || k > size) return -1;
+        if (k == size) return head.id;
+        Node p1 = head;
+        Node p2 = head;
+
+        for (int i = 0; i < k; i++) {
+            p1 = p1.next;
+        }
+
+        while (p1 != null){
+            p1  = p1.next;
+            p2 = p2.next;
+        }
+        return p2.id;
+
+    }
     void printNode(){
         Node current = head;
         while (current != null){

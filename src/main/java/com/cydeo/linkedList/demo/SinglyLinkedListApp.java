@@ -27,6 +27,9 @@ public class SinglyLinkedListApp {
 
         myList.addFirst(12);
         myList.printNode();
+        System.out.println("5th element from last: " + myList.getKthFromLast(5));
+        System.out.println("10th element from last: " + myList.getKthFromLast(10));
+        System.out.println("13th element from last: " + myList.getKthFromLast(13));
 
     }
 }
