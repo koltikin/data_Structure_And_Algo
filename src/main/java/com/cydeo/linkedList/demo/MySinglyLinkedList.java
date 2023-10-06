@@ -86,6 +86,27 @@ public class MySinglyLinkedList {
         return p2.id;
 
     }
+    public void removeKthFromLast(int k){
+        Node p1 = head;
+        Node p2 = head;
+        Node current = head;
+        if (k == size){
+            head = head.next;
+            current.next = null;
+        }
+        if (k < size){
+            for (int i = 0; i < k; i++) {
+                p1 = p1.next;
+            }
+            while (p1.next != null){
+                p1 = p1.next;
+                p2 = p2.next;
+            }
+            current = p2.next;
+            p2.next = p2.next.next;
+            current.next = null;
+        }
+    }
     void printNode(){
         Node current = head;
         while (current != null){

@@ -31,5 +31,10 @@ public class SinglyLinkedListApp {
         System.out.println("10th element from last: " + myList.getKthFromLast(10));
         System.out.println("13th element from last: " + myList.getKthFromLast(13));
 
+        myList.removeKthFromLast(10);
+        myList.printNode();
+        myList.removeKthFromLast(5);
+        myList.printNode();
+
     }
 }
