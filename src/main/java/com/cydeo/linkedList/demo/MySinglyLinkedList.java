@@ -20,29 +20,42 @@ public class MySinglyLinkedList {
         }
 
     }
-void deleteById(int id){
-        // check if empty
-    if (isEmpty()) System.out.println("List is empty!!!");
-    Node prev = head;
-    Node current = head;
-    while (current != null) {
-        if (current.id == id) {
-            if (current == head) {
-                head = current.next;
-                current.next = null;
-            } else if (current == tail) {
-                tail = prev;
-                prev.next = null;
-            } else {
-                prev.next = current.next;
-                current.next = null;
+    void deleteById(int id){
+            // check if empty
+        if (isEmpty()) System.out.println("List is empty!!!");
+        Node prev = head;
+        Node current = head;
+        while (current != null) {
+            if (current.id == id) {
+                if (current == head) {
+                    head = current.next;
+                    current.next = null;
+                } else if (current == tail) {
+                    tail = prev;
+                    prev.next = null;
+                } else {
+                    prev.next = current.next;
+                    current.next = null;
+                }
+                size--;
             }
-            size--;
+            prev = current;
+            current = current.next;
         }
-        prev = current;
-        current = current.next;
     }
-}
+    int indexOf(int id){
+        if (isEmpty()) return -1;
+        int position = 0;
+        Node current = head;
+        while (current != null){
+            if (current.id == id ){
+                return position;
+            }
+            position++;
+            current = current.next;
+        }
+        return -1;
+    }
     void printNode(){
         Node current = head;
         while (current != null){

@@ -19,5 +19,9 @@ public class SinglyLinkedListApp {
         myList.printNode();
         System.out.println(myList.size);
 
+        System.out.println(myList.indexOf(8));
+        System.out.println(myList.indexOf(3));
+        System.out.println(myList.indexOf(0));
+
     }
 }
