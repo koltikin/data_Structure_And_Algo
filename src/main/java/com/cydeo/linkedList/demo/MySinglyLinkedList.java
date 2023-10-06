@@ -61,12 +61,11 @@ public class MySinglyLinkedList {
         Node node = new Node(data);
         if (isEmpty()){
            head = tail = node;
-           size++;
         } else {
             node.next = head;
             head = node;
-            size ++;
         }
+        size++;
     }
 
     int getKthFromLast(int k){
