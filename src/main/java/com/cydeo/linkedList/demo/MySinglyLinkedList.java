@@ -56,6 +56,18 @@ public class MySinglyLinkedList {
         }
         return -1;
     }
+
+    void addFirst(int data){
+        Node node = new Node(data);
+        if (isEmpty()){
+           head = tail = node;
+           size++;
+        } else {
+            node.next = head;
+            head = node;
+            size ++;
+        }
+    }
     void printNode(){
         Node current = head;
         while (current != null){

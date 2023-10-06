@@ -6,8 +6,10 @@ public class SinglyLinkedListApp {
         MySinglyLinkedList myList = new MySinglyLinkedList();
         System.out.println(myList.isEmpty());
 
+        myList.addFirst(5);
+
         for (int i = 0; i <10 ; i++) {
-            myList.add(i);
+            myList.addFirst(i);
 
         }
         myList.printNode();
@@ -17,11 +19,14 @@ public class SinglyLinkedListApp {
         myList.deleteById(10);
 
         myList.printNode();
-        System.out.println(myList.size);
+//        System.out.println(myList.size);
+//
+//        System.out.println(myList.indexOf(8));
+//        System.out.println(myList.indexOf(3));
+//        System.out.println(myList.indexOf(0));
 
-        System.out.println(myList.indexOf(8));
-        System.out.println(myList.indexOf(3));
-        System.out.println(myList.indexOf(0));
+        myList.addFirst(12);
+        myList.printNode();
 
     }
 }
