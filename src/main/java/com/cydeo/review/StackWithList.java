@@ -1,12 +1,13 @@
 package com.cydeo.review;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StackWithList<E> {
     List<E> list;
 
-    public StackWithList(List<E> list) {
-        this.list = list;
+    public StackWithList() {
+        this.list = new ArrayList<>();
     }
 
     public void push(E e){

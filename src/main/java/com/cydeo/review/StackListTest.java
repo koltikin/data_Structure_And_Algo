@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class StackListTest {
     public static void main(String[] args) {
 
-        StackWithList<Integer> myStack = new StackWithList<>(new ArrayList<>());
+        StackWithList<Integer> myStack = new StackWithList<>();
 
         myStack.push(1);
         myStack.push(2);

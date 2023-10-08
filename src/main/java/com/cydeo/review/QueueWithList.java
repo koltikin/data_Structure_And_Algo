@@ -1,12 +1,13 @@
 package com.cydeo.review;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class QueueWithList<E> {
     List<E> list;
 
-    public QueueWithList(List<E> list) {
-        this.list = list;
+    public QueueWithList() {
+        this.list = new ArrayList<>();
     }
     public void enQueue(E e){
         list.add(e);

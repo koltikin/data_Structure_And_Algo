@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class QueueListTest {
     public static void main(String[] args) {
-        QueueWithList<Integer> myQueue = new QueueWithList<>(new ArrayList<>());
+        QueueWithList<Integer> myQueue = new QueueWithList<>();
 
         myQueue.enQueue(1);
         myQueue.enQueue(2);
